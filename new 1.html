@@ -1,4 +1,27 @@
 <html>
-	<head>Hello world</head>
-	<body></body>
+	<head>
+        <script>
+            function getInfo()
+            {
+                var input1 = document.form1.username.value;
+                
+                if (input1 == "" || input1 == " ")
+                    {
+                        alert("Please enter a username");
+                    }
+                else
+                    {
+                        alert("Well done: " + input1);
+                        document.form1.reset();
+                    }
+            }
+        </script>
+    </head>
+	<body>
+        <h1 id="title1">Hello world</h1>
+        <form name="form1">
+            <input type="text" id="username">
+            <input type="button" id="button1" onClick="getInfo()">
+        </form>
+    </body>
 </html>
